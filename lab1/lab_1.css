@@ -1,0 +1,53 @@
+nav {
+	background-color: red;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.logo {
+	background-color: blue;
+	display: inline-block;
+	vertical-align: top;
+	width: 50px;
+	height: 50px;
+}
+
+.searchBar{
+	background-color: green;
+	display: inline-block;
+}
+
+.otherInHeader {
+	display:inline-block;
+}
+.facebook {
+	display: inline-block;
+	background-image: url('logos/fbart.png');
+	width: 10px;
+	height: 10px;
+}
+
+header {
+	width: 100%;
+}
+
+main {
+	display: inline-block;
+	background-color: yellow;
+	width: 80%;
+}
+
+aside {
+	display: inline-block;
+	background-color: green;
+	float: right;
+	width: 20%;
+}
+
+article {
+	background-color: blue;
+}
+
+footer {
+	background-color:gray;
+}
