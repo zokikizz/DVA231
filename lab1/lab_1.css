@@ -24,7 +24,7 @@ nav {
 
 .headerContent {
 	display:inline-block;
-	margin: 9.5px;
+	margin-top: 9px;
 }
 
 header {
@@ -156,4 +156,59 @@ html {
 	display: inline-block;
 	width: 49%;
 	height: 49%;
+}
+
+.Bar {
+	display: inline-block;
+	width: 1px;
+	vertical-align: middle;
+	height: 20px;
+	background: linear-gradient(to bottom, #333333 15%,#727272 50%,#232323 85%);
+}
+
+
+.headerBottom div {
+	display: inline-block;
+}
+
+.headerBottom p {
+	color: white;
+	font-size: 10px;
+}
+
+.dropDown {
+	width: 20%;
+}
+
+.downArrow {
+	border-color: #ccc transparent transparent transparent;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+    right: 17px;
+    top: 23px;
+	transition: .3s;
+    width: 0;
+}
+
+.asideTitle {
+	font-size: 15px;
+	font: Arial, sans-serif;
+	font-weight: normal;
+	color: #333;
+	margin-left: 10px;
+}
+
+.asideRow {
+	margin: 10px;
+}
+
+.asideRow div {
+	display:inline-block;
+}
+
+.asideContent {
+	vertical-align: top;
 }
