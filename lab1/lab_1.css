@@ -104,44 +104,36 @@ html {
 .poster {
 	display: table-cell;
     vertical-align: top;
+	width: 25%;
+	padding: 5px;
 }
 
-.posterImage1 {
-	width: 180px;
+.posterImage {
+	width: 100%;
 	height: auto;
-	padding-left: 10px;
+	
 }
 
 .playButton1 {
 	left: 28%;
     position: absolute;
-    top: 30%;
+    top: 35%;
 	transform: translate(-50%, -50%);
 }
 
-.posterImage2 {
-	width: 180px;
-	height: auto;
-	padding-left: 15px;
-}
 
 .playButton2 {
 	left: 41%;
     position: absolute;
-    top: 30%;
+    top: 35%;
 	transform: translate(-50%, -50%);
 }
 
-.posterImage3 {
-	width: 180px;
-	height: auto;
-	padding-left: 15px;
-}
 
 .playButton3 {
 	left: 54%;
     position: absolute;
-    top: 30%;
+    top: 35%;
 	transform: translate(-50%, -50%);
 }
 
