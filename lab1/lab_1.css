@@ -13,20 +13,57 @@ nav {
 	display: inline-block;
 	background-image: url("logos/imdb.png");
 	vertical-align: top;
-	width: 85px;
-	height: 65px;
 	margin-left: 1.2px;
+	margin-top: 1.5%;
 }
-
 .headerUpper{
 	display: inline-block;
+	width: 100%;
 }
 
 .searchBar {
+	width: 75%;
+	float: left;
+	display: block;
+	
+}
+.inlineSearch{
+	width: 60%;
 	display: inline-block;
-	vertical-align: top;
+	float: left;
+	padding-top: 1%;
 }
 
+.inlineSearch input{
+	width: 100%;
+	height: 23px;
+}
+.inline{
+	width: 20%;
+	height: 0.5%;
+	vertical-align: top;
+	display: inline-block;
+	float: left;
+	padding-top: 1%;
+}
+
+.inline select{
+	width: 100%;
+	height: 23px;
+}
+.search-button {
+	background-color: transparent;
+	border-color: transparent;
+	display: flex;
+	padding-top: 0.5%;
+	padding-left: 0;
+}
+
+.headerIcons {
+	display: inline-block;
+    margin-left: 2.3%;
+    margin-top: 1%;
+}
 .headerContent {
 	display:inline-block;
 	margin-top: 9px;
@@ -149,6 +186,18 @@ html {
 	font-size: 10px;
 }
 
+#asideLinkId {
+	font-size: 12px;
+	color: #136CB2;
+	margin-left: 0;
+}
+
+.asideBar {
+	border-bottom: solid 1px #ccc;
+	height: 1px;
+	width: 100%;
+}
+
 .seemore::after {
 	content: "\0000a0\0000bb";
 }
@@ -267,6 +316,7 @@ html {
 }
 
 .otherOptions {
+	margin-left: 2.3%;
 	font-size: 9px;
 	color: white;
 	text-decoration: none;
