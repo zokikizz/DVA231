@@ -1,5 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body p {
 	font-size: 13px;
+	margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -12,9 +19,7 @@ nav {
 .logo {
 	display: inline-block;
 	background-image: url("logos/imdb.png");
-	vertical-align: top;
-	margin-left: 1.2px;
-	margin-top: 1.5%;
+	vertical-align: top;	
 }
 .headerUpper{
 	display: inline-block;
@@ -22,47 +27,55 @@ nav {
 }
 
 .searchBar {
-	width: 75%;
+	width: 60%;
 	float: left;
 	display: block;
 	
 }
 .inlineSearch{
-	width: 60%;
+	width: 70%;
 	display: inline-block;
-	float: left;
+	vertical-align: top;
 	padding-top: 1%;
 }
 
 .inlineSearch input{
 	width: 100%;
 	height: 23px;
+	font-size:10px;
 }
 .inline{
 	width: 20%;
 	height: 0.5%;
 	vertical-align: top;
 	display: inline-block;
-	float: left;
 	padding-top: 1%;
 }
 
 .inline select{
 	width: 100%;
 	height: 23px;
+	font-size: 10px;
 }
 .search-button {
 	background-color: transparent;
-	border-color: transparent;
-	display: flex;
-	padding-top: 0.5%;
-	padding-left: 0;
+	margin: 0;
+    padding: 0;
+    border: none;
+    height: 24px;
+    vertical-align: bottom;
+}
+
+.search-button img {
+	height: 24px;
 }
 
 .headerIcons {
 	display: inline-block;
     margin-left: 2.3%;
     margin-top: 1%;
+	width: 30%;
+	float: right;
 }
 .headerContent {
 	display:inline-block;
@@ -104,10 +117,14 @@ html {
 }
 
 .wrap {
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 12%;
+	margin-right: 12%;
 	box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
 
+}
+
+.displayLinksContainer {
+	float: right;
 }
 
 .displayLinks {
@@ -232,15 +249,21 @@ html {
 	font-size: 10px;
 	display: inline-block;
 	vertical-align: middle;
+	margin: 0px;
 }
 
 .dropDown {
 	position: relative;
-	width: 18%;
+	width: 16%;
 }
 
 .dropDown:hover {
 	background: linear-gradient(to bottom, #333333 15%,#505050 50%,#333333 85%);
+}
+
+.dropDown select {
+	width: 100%;
+	font-size: 10px;
 }
 
 .dropDown select {
@@ -294,6 +317,7 @@ html {
 	vertical-align: top;
 	color: #136CB2;
 	text-decoration: underline;
+	font-size: 11px;
 }
 
 .asideExtra {
@@ -332,7 +356,8 @@ html {
 }
 
 .otherOptions {
-	margin-left: 2.3%;
+	line-height: 20px;
+	float: right;
 	font-size: 9px;
 	color: white;
 	text-decoration: none;
