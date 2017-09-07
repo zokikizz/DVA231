@@ -1,0 +1,365 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body p {
+	font-size: 13px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+nav {
+	background-color: red;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.logo {
+	display: inline-block;
+	background-image: url("logos/imdb.png");
+	vertical-align: top;	
+}
+.headerUpper{
+	display: inline-block;
+	width: 100%;
+}
+
+.searchBar {
+	width: 60%;
+	float: left;
+	display: block;
+	
+}
+.inlineSearch{
+	width: 70%;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 1%;
+}
+
+.inlineSearch input{
+	width: 100%;
+	height: 23px;
+	font-size:10px;
+}
+.inline{
+	width: 20%;
+	height: 0.5%;
+	vertical-align: top;
+	display: inline-block;
+	padding-top: 1%;
+}
+
+.inline select{
+	width: 100%;
+	height: 23px;
+	font-size: 10px;
+}
+.search-button {
+	background-color: transparent;
+	margin: 0;
+    padding: 0;
+    border: none;
+    height: 24px;
+    vertical-align: bottom;
+}
+
+.search-button img {
+	height: 24px;
+}
+
+.headerIcons {
+	display: inline-block;
+    margin-left: 2.3%;
+    margin-top: 1%;
+	width: 30%;
+	float: right;
+}
+.headerContent {
+	display:inline-block;
+	margin-top: 9px;
+	width: calc(100% - 100px);
+}
+
+header {
+	width: 100%;
+	height: 30%;
+	background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+}
+
+main {
+	display: inline-block;
+	width: 70%;
+}
+
+aside {
+	display: inline-block;
+	background-color: transparent;
+	float: right;
+	width: 30%;
+	height: 70%;
+}
+
+footer {
+	background-color:gray;
+}
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+    color: #333;
+	font-size: 13px;
+}
+
+html {
+	background-color: #e3e2dd;
+}
+
+.wrap {
+	margin-left: 12%;
+	margin-right: 12%;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+
+}
+
+.displayLinksContainer {
+	float: right;
+}
+
+.displayLinks {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.displayLinks img {
+	margin: 0;
+}
+
+.iconLine {
+	margin-bottom: 10px;
+	float: right;
+} 
+
+.iconSize {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+}
+
+.video {
+	height: 40%;
+	background-color: #333;
+    color: #747474;
+	padding: 20px 21px 9px 20px;
+}
+
+.videoPosters {
+	width: 100%;
+	display: table-cell;
+    table-layout: fixed;
+}
+
+.poster {
+	display: table-cell;
+    vertical-align: top;
+	width: 25%;
+	padding: 5px;
+}
+
+.posterImage {
+	width: 100%;
+	height: auto;
+	
+}
+
+.playButton1 {
+	left: 28%;
+    position: absolute;
+    top: 35%;
+	transform: translate(-50%, -50%);
+}
+
+
+.playButton2 {
+	left: 41%;
+    position: absolute;
+    top: 35%;
+	transform: translate(-50%, -50%);
+}
+
+
+.playButton3 {
+	left: 54%;
+    position: absolute;
+    top: 35%;
+	transform: translate(-50%, -50%);
+}
+
+.link {
+	color: #63C9FF;
+	margin-left: 10px;
+	font-size: 10px;
+}
+
+#asideLinkId {
+	font-size: 12px;
+	color: #136CB2;
+	margin-left: 0;
+}
+
+.asideBar {
+	border-bottom: solid 1px #ccc;
+	height: 1px;
+	width: 100%;
+}
+
+.seemore::after {
+	content: "\0000a0\0000bb";
+}
+.movieInformation {
+	padding: 20px;
+	height: 60%;
+	background-color: white;
+	border: 1px solid #CCC;
+}
+
+.images {
+	display: inline-block;
+	width: 49%;
+	height: 49%;
+}
+
+.Bar {
+	display: inline-block;
+	width: 1px;
+	vertical-align: middle;
+	height: 20px;
+	background: linear-gradient(to bottom, #333333 15%,#727272 50%,#232323 85%);
+}
+
+
+.headerBottom div {
+	display: inline-block;
+}
+
+.headerBottom p {
+	color: white;
+	font-size: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px;
+}
+
+.dropDown {
+	position: relative;
+	width: 16%;
+}
+
+.dropDown:hover {
+	background: linear-gradient(to bottom, #333333 15%,#505050 50%,#333333 85%);
+}
+
+.dropDown select {
+	width: 100%;
+	font-size: 10px;
+}
+
+.dropDown select {
+	background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+.dropDown option {
+	background-color: transparent;
+    border: transparent;
+    color: black;
+}
+
+.downArrow {
+	border-color: #ccc transparent transparent transparent;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    height: 0;
+    line-height: 0;
+   /* position: absolute;
+    right: 17px;
+    top: 23px;
+	transition: .3s;*/
+    width: 0;
+}
+
+.arrowDiv {
+	display: inline-block;
+	width: 20%;
+	float: left;
+}
+
+.asideTitle {
+	font-size: 15px;
+	font: Arial, sans-serif;
+	font-weight: normal;
+	color: #333;
+	margin-left: 10px;
+}
+
+.asideRow {
+	margin: 10px;
+}
+
+.asideRow div {
+	display:inline-block;
+}
+
+.asideContent {
+	vertical-align: top;
+	color: #136CB2;
+	text-decoration: underline;
+	font-size: 11px;
+}
+
+.asideExtra {
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+    font-size: 11px;
+
+}
+
+.text {
+	width: 70%;
+}
+
+.arrow {
+	vertical-align: bottom;
+}
+
+#specialArrow {
+	vertical-align: bottom;
+}
+
+.linksInHeader {
+	text-decoration:none;
+	color: white;
+	font-size: 10px;
+    vertical-align: super;
+}
+
+.whiteBar {
+	color: white;
+	display:inline;
+	margin:0px;
+	padding:0px;
+	vertical-align: super;
+}
+
+.otherOptions {
+	line-height: 20px;
+	float: right;
+	font-size: 9px;
+	color: white;
+	text-decoration: none;
+}
+
