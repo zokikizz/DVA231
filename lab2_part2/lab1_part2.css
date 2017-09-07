@@ -1,12 +1,25 @@
 /* Custom container */
+* {
+     margin: 0;
+    padding: 0;
+}
+
 .row{
     margin-left: 0px;
     margin-right: 0px;
 }
 
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    margin-left: 12%;
+	margin-right: 12%;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+}
+
 [class*="col-"]{
     padding-right: 0px;
-    padding-left: 0px;
+    padding-left: 0px; 
 }
 
 body {
@@ -19,8 +32,13 @@ header {
 	background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
 }
 
+.wrapper {
+	margin-left: 12%;
+	margin-right: 12%;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+
+}
 .logo {
-	display: inline-block;
 	background-image: url("logos/imdb.png");
 	vertical-align: top;	
 }
