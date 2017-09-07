@@ -1,0 +1,26 @@
+/* Custom container */
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+[class*="col-"]{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+body {
+	background-color: #e3e2dd;
+}
+
+header {
+	width: 100%;
+	height: 30%;
+	background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+}
+
+.logo {
+	display: inline-block;
+	background-image: url("logos/imdb.png");
+	vertical-align: top;	
+}
