@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css_part_2.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css_part_2.css">
+  <link rel="stylesheet" type="text/css" href="libraries\bootstrap-social-gh-pages\bootstrap-social.css">
+  <link rel="stylesheet" type="text/css" href="libraries\font-awesome-4.7.0\css\font-awesome.css">
 </head>
 <body>
 
@@ -20,8 +22,8 @@
 	</div>
     <div class="col-xs-11"> <!--style="background-color:lavenderblush;"-->
 		<div class="row headerUpper">
-			<div class="col-xs-8 no-padding">
-				<div class="col-xs-7 search no-padding">
+			<div class="col-xs-8 no-padding-left">
+				<div class="col-xs-7 search no-padding-left">
               <input id="searchBar" type="text" class="form-control input-xs" placeholder="upper header" /> 
           </div>
             <select class="col-xs-2 selectHeaderUpper">
@@ -64,29 +66,53 @@
 
 		</div>
 		<div class="row">
-      <ul class="col-md-8 col-sm-8" id="dropDownsId">
-        <li class="col-md-2 col-sm-2 dropdown" id="dropDown1">
+      <ul class="col-xs-8" id="dropDownsId">
+        <li class="col-xs-2 dropdown" id="dropDown1">
           <div class="row">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Movies, TV & Showtimes<b class="caret pull-right"></b></a>
-          <ul class="dropdown-menu multi-column columns-1">
-            <div class="row">
-                <div class="col-sm-6">
-				            <ul class="multi-column-dropdown">
-					            <li><a href="#">Action</a></li>
-					            <li><a href="#">Another action</a></li>
-					            <li><a href="#">Something else here that's extra long so we can see how it looks</a></li>
-				            </ul>
-			            </div>
+          <ul class="row no-padding dropdown-menu">
+            <div class="col-xs-4 no-padding">
+				      <ul class="multi-column-dropdown">
+					      <li><strong><a <h5 style="color:#A58500">MOVIES</h5></a></strong></li>
+					      <li><a href="#">In Theaters</a></li>
+                <li><a href="#">Showtimes & Tickets</a></li>
+                <li><a href="#">Latest Trailers</a></li>
+                <li><a href="#">Coming Soon</a></li>
+                <li><a href="#">Release Calendar</a></li>
+                <li><a href="#">Top Rated Movies</a></li>
+                <li><a href="#">Top Rated Indian Movies</a></li>
+                <li><a href="#">Most Popular Movies</a></li>
+		          </ul>
             </div>
+            <div class="col-xs-4 no-padding">
+                <ul class="multi-column-dropdown">
+                  <li><strong><a <h5 style="color:#A58500">TV & VIDEO</h5></a></strong></li>
+                  <li><a href="#">IMDb TV</a></li>
+                  <li><a href="#">On Tonight</a></li>
+                  <li><a href="#">Top Rated TV Shows</a></li>
+                  <li><a href="#">Most Popular TV Shows</a></li>
+                  <li><a href="#">DVD & Bluy</a></li>
+                  <li><strong><a <h5 style="color:#A58500">SPECIAL FEATURES</h5></a></strong></li>
+                  <li><a href="#">Amazon Originals</a></li>
+                  <li><a href="#">Streaming</a></li>
+                </ul>
+              </div>
+            <div class="col-xs-4 dropdownPic1"></div>
           </ul>
           </div>
         </li>
       </ul>
-      <div class="col-md-4 col-sm-4">
+      <div class="col-xs-3">
         <div class="bottomLinks">
-          <a href="#">Sing in with facebook</a>
-          <a href="#">Other sing in options</a>
+          <a class="btn btn-block btn-social btn-xs btn-facebook" style="width: 158px">
+            <span class="fa fa-facebook"></span> Sign in with Facebook
+          </a>
         </div>
+        <!-- #TODO
+        <div class="col-xs-1">
+          <a href="#">Other sign in options</a>
+        </div>
+        -->
 
       </div>
 		</div>
