@@ -57,6 +57,10 @@ nav {
 	height: 23px;
 	font-size: 10px;
 }
+
+.no-padding {
+	padding: 0;
+}
 .search-button {
 	background-color: transparent;
 	margin: 0;

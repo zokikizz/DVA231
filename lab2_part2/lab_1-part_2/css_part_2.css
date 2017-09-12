@@ -1,15 +1,21 @@
-* {
-	margin: 0;
+
+  [class*="col-"],  /* Elements whose class attribute begins with "col-" */
+  [class^="col-"] { /* Elements whose class attribute contains the substring "col-" */
+	padding-left: 0;
+	padding-right: 0;
+  }
+
+.container-fluid {
+	margin-left: 15% !important;
+	margin-right: 15% !important;
 	padding: 0;
+}
+.containerStyle {
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
 }
 
 body {
-	background-color: #e3e2dd;
-	background: -webkit-linear-gradient(top, #b3b3b0 0%, #e3e2dd 500px);
-}
-
-.containerStyle {
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+	background-color: #e3e2dd !important;
 }
 
 .headerStyle {
@@ -21,6 +27,10 @@ header p {
 	color: white;
 	padding: 0;
 	margin: 0;
+}
+
+.headerUpper {
+	margin-top: 1%;
 }
 
 .logoColumn {
@@ -35,8 +45,8 @@ header p {
 
 }
 
-#searchBar {
-	width:	50%;
+.searchBar {
+	height: 2%;
 }
 
 .search {
@@ -45,6 +55,23 @@ header p {
 	justify-content: space-around;
 }
 
+.selectHeaderUpper {
+	height: 10% !important;
+}
+
+.search-button {
+	background-color: transparent;
+	margin: 0;
+    padding: 0;
+    border: none;
+    height: 24px;
+    vertical-align: bottom;
+}
+
+.searchButtonPadding {
+	height: auto;
+	padding: 0 !important;
+}
 
 .otherInUpperHeader{
 	display:flex;
@@ -174,4 +201,43 @@ aside {
     border-bottom: solid 1px #ccc;
     height: 1px;
     width: 100%;
+}
+
+/*dropDown CSS*/
+.dropdown-menu {
+	min-width: 200px;
+}
+.dropdown-menu.columns-2 {
+	min-width: 400px;
+}
+.dropdown-menu.columns-3 {
+	min-width: 600px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+	font-weight: 300;
+}
+.multi-column-dropdown {
+	list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.multi-column-dropdown li a {
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	color: white;
+	white-space: normal;
+}
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	color: #262626;
+	background-color: #999;
+}
+ 
+@media (max-width: 767px) {
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
 }
