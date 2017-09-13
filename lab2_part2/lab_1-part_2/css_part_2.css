@@ -1,4 +1,11 @@
-
+/*
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+  }
+*/
 .container-fluid {
 	display: table !important;
 	margin-left: 15% !important;
@@ -6,9 +13,6 @@
 	padding: 0;
 }
 
-.col {
-	display: table-cell !important;
-}
 .containerStyle {
 	width: 67% !important;
 	box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
@@ -32,8 +36,7 @@ body {
 }
 
 .headerStyle {
-	display: flex;
-	background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+	background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%) !important;
 }
 
 header p {
@@ -42,21 +45,15 @@ header p {
 	margin: 0;
 }
 
+
 .headerUpper {
 	margin-top: 1%;
 }
 
 .logoColumn {
-	display: flex;
-  align-items: center;
-  justify-content: space-around;
+	padding-top: 32px;
 }
 
-.logo {
-	display: flex;
-	justify-content: center;
-
-}
 
 #searchBar {
 	height: 36.5px;
@@ -64,8 +61,6 @@ header p {
 
 .search {
 	padding-right: 2px !important;
-	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 }
 
@@ -89,29 +84,41 @@ header p {
 }
 
 .otherInUpperHeader{
-	display:flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
 
 }
-
+.headerUpperMargin {
+	margin-top: 2px;
+}
 .wrapBottom {
-	display: flex;
 	justify-content: space-between;
 }
 
-.dropDowns{
-	display: flex;
-	justify-content: space-between;
+.dropdown{
+	width: 16%;
 }
 
+.padding-dropdown2 {
+	width: 18%;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.dropdownBar {
+	background: linear-gradient(to bottom, #333333 15%,#727272 50%,#232323 85%);
+    height: 46px;
+    padding: 0px;
+	width: 1px;
+	margin-right: 1.5%;
+}
+
+.paddingBar2 {
+	margin-right: 1.5%;
+	margin-left: 1%;
+}
 #dropDownsId {
-		padding: 0;
 }
 
 .bottomLinks {
-	display: flex;
 	justify-content: space-between;
 }
 
@@ -135,17 +142,15 @@ header p {
 
 .posters {
 	width: inherit;
-	display: flex;
 	justify-content: space-evenly;
 }
 
 .posterLink {
-	display: flex;
+	
 }
 
 .postersForArticles {
-	display: flex;
-	justify-content: space-around;
+	
 }
 
 article {
@@ -188,9 +193,7 @@ aside {
 }
 
 .asideLinksWrapper {
-	display: flex;
-	justify-content: space-around;
-	flex-direction: column;
+
 }
 
 .asideParagraf {
@@ -208,8 +211,6 @@ aside {
 
 .asideBookmark {
 	padding: 0;
-	display: flex;
-	justify-content: flex-end;
 }
 
 .asideBar {

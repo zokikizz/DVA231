@@ -13,14 +13,14 @@
 </head>
 <body>
 
-<div class="container containerStyle">
-  <header class="row headerStyle">
+<div class="d-flex container containerStyle no-padding">
+  <header class="flex-row row headerStyle">
     <div class="col-xs-1 logoColumn"> <!-- style="background-color:lavender;"-->
-			<div class="logo">
+			
 				<img class="img-responsive" src="logos/imdb.ico"/>
-			</div>
+		
 	</div>
-    <div class="col-xs-11"> <!--style="background-color:lavenderblush;"-->
+    <div class="col-xs-11 colDisplayCell"> <!--style="background-color:lavenderblush;"-->
 		<div class="row headerUpper">
 			<div class="col-xs-8 no-padding-left">
 				<div class="col-xs-7 search no-padding-left">
@@ -35,7 +35,7 @@
               </button>
 
 			</div>
-
+      <!--
 			<div class="col-xs-4">
 				<div class="otherInUpperHeader">
 					<div>
@@ -63,13 +63,13 @@
 
 				</div>
 			</div>
-
-		</div>
-		<div class="row">
-      <ul class="col-xs-8" id="dropDownsId">
-        <li class="col-xs-2 dropdown" id="dropDown1">
-          <div class="row">
-            <a href="#" class="dropdown-toggle no-padding-right" data-toggle="dropdown">Movies, TV & Showtimes<b class="caret pull-right" style="position:relative"></b></a>
+    -->
+    </div>
+		<div class="row headerUpperMargin">
+      <ul class="col-xs-8 no-padding-left" id="dropDownsId">
+        <li class="col-xs-1 dropdown dropdownBar"></li>
+        <li class="col-xs-2 dropdown no-padding" id="dropDown1">
+          <a href="#" class="dropdown-toggle no-padding-right" data-toggle="dropdown">Movies, TV & Showtimes<b class="caret pull-right" style="position:relative"></b></a>
           <ul class="row no-padding dropdown-menu">
             <div class="col-xs-4 no-padding">
 				      <ul class="multi-column-dropdown">
@@ -99,7 +99,39 @@
               </div>
             <div class="col-xs-4 dropdownPic1"></div>
           </ul>
-          </div>
+        </li>
+        <li class="col-xs-1 dropdown dropdownBar paddingBar2"></li>
+        <li class="col-xs-2 dropdown padding-dropdown2" id="dropDown1">
+          <a href="#" class="dropdown-toggle no-padding-right" data-toggle="dropdown">Movies, TV & Showtimes<b class="caret pull-right" style="position:relative"></b></a>
+          <ul class="row no-padding dropdown-menu">
+            <div class="col-xs-4 no-padding">
+				      <ul class="multi-column-dropdown">
+					      <li><strong><a <h5 style="color:#A58500">MOVIES</h5></a></strong></li>
+					      <li><a href="#">In Theaters</a></li>
+                <li><a href="#">Showtimes & Tickets</a></li>
+                <li><a href="#">Latest Trailers</a></li>
+                <li><a href="#">Coming Soon</a></li>
+                <li><a href="#">Release Calendar</a></li>
+                <li><a href="#">Top Rated Movies</a></li>
+                <li><a href="#">Top Rated Indian Movies</a></li>
+                <li><a href="#">Most Popular Movies</a></li>
+		          </ul>
+            </div>
+            <div class="col-xs-4 no-padding">
+                <ul class="multi-column-dropdown">
+                  <li><strong><a <h5 style="color:#A58500">TV & VIDEO</h5></a></strong></li>
+                  <li><a href="#">IMDb TV</a></li>
+                  <li><a href="#">On Tonight</a></li>
+                  <li><a href="#">Top Rated TV Shows</a></li>
+                  <li><a href="#">Most Popular TV Shows</a></li>
+                  <li><a href="#">DVD & Bluy</a></li>
+                  <li><strong><a <h5 style="color:#A58500">SPECIAL FEATURES</h5></a></strong></li>
+                  <li><a href="#">Amazon Originals</a></li>
+                  <li><a href="#">Streaming</a></li>
+                </ul>
+              </div>
+            <div class="col-xs-4 dropdownPic1"></div>
+          </ul>
         </li>
       </ul>
       <div class="col-xs-3">
@@ -120,6 +152,7 @@
 	</div>
   </header>
 
+  <!-- #TODO 
   <div class="row">
 	<main class="col-xs-9 mainWidth">
 			<div class="row postersAreaColor">
