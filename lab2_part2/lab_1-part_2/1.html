@@ -17,7 +17,7 @@
   <header class="row headerStyle">
     <div class="col-xs-1 logoColumn"> <!-- style="background-color:lavender;"-->
 			<div class="logo">
-				<img class="logo" src="logos/imdb.ico"/>
+				<img class="img-responsive" src="logos/imdb.ico"/>
 			</div>
 	</div>
     <div class="col-xs-11"> <!--style="background-color:lavenderblush;"-->
@@ -69,7 +69,7 @@
       <ul class="col-xs-8" id="dropDownsId">
         <li class="col-xs-2 dropdown" id="dropDown1">
           <div class="row">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Movies, TV & Showtimes<b class="caret pull-right"></b></a>
+            <a href="#" class="dropdown-toggle no-padding-right" data-toggle="dropdown">Movies, TV & Showtimes<b class="caret pull-right" style="position:relative"></b></a>
           <ul class="row no-padding dropdown-menu">
             <div class="col-xs-4 no-padding">
 				      <ul class="multi-column-dropdown">
@@ -121,27 +121,26 @@
   </header>
 
   <div class="row">
-	<main class="col-md-9 col-sm-9" style="background-color:lavender;">
+	<main class="col-xs-9 mainWidth">
 			<div class="row postersAreaColor">
         <div class="marginsForPosters">
-            <div class="posters">
-
-                <div class="posterLink">
-                  <img src="posters/poster1.jpg">
-
-                  <p class="seemore">
-                      <a href="lab_1.html" class="link">Browse Trailers</a>
-                  </p>
+            <div class="row posters">
+                <div class="col-xs-4 posterLink">
+                  <img class="img-responsive" src="posters/poster1.jpg">
                 </div>
 
-                <div>
-                <img src="posters/poster2.jpg">
+                <div class="col-xs-4 posterLink">
+                <img class="img-responsive" src="posters/poster2.jpg">
                 </div>
 
-              <div>
-                  <img src="posters/poster3.jpg">
+              <div class="col-xs-4 posterLink">
+                  <img  class="img-responsive" src="posters/poster3.jpg">
               </div>
             </div>
+
+            <p class="seemore">
+              <a href="lab_1.html" class="link">Browse Trailers</a>
+          </p>
 
 
           </div>

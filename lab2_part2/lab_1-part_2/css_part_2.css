@@ -18,6 +18,10 @@
 	padding-left: 0 !important;
 }
 
+.no-padding-right {
+	padding-right: 0 !important;
+}
+
 .no-padding {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -121,7 +125,8 @@ header p {
 
 .postersAreaColor {
 	background-color: #333;
-  color: #747474;
+	color: #747474;
+    height: 325px !important;
 }
 
 .marginsForPosters{
@@ -136,7 +141,6 @@ header p {
 
 .posterLink {
 	display: flex;
-	flex-direction: column;
 }
 
 .postersForArticles {
@@ -266,4 +270,8 @@ aside {
     position: absolute;
 	right: -5px;
 	top: 0px;
+}
+
+.mainWidth {
+	width: 67%;
 }
