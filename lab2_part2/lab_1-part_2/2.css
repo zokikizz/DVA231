@@ -385,6 +385,11 @@ main {
   object-fit: contain;
 }
 
+.imagesInArtice video {
+  max-width: 49%;
+  object-fit: contain;
+}
+
 /*Article ends*/
 
 
