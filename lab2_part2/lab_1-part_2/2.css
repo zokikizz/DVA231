@@ -118,6 +118,7 @@ header {
 }
 
 .imdbPro:hover {
+  width: 70px;
   background: linear-gradient(to bottom, #333333 15%,#505050 50%,#333333 85%);
 }
 
