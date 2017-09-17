@@ -8,16 +8,27 @@
     <link rel="stylesheet" href="2.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="libraries\jquery-mousewheel\jquery.mousewheel.js"></script>
 
     <link rel="stylesheet" href="font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.css">
     <link rel="stylesheet" href="font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.min.css">
   </head>
+  <script>
+  
+  // using on
+  $('#posterScroll').on('mousewheel', function(event) {
+      console.log("(ON) Mousewheel running...");
+      console.log(event.deltaX, event.deltaY, event.deltaFactor);
+  });
+  $('#posterScroll').mousewheel(function(event) {
+    console.log("Mousewheel running...");
+    console.log(event.deltaX, event.deltaY, event.deltaFactor);
+});
+
+
+  </script>
   <body>
-
-
-
-
-
     <header>
         <div class="headerWraper">
           <div class="logo">
@@ -145,7 +156,7 @@
 
     <div class="wrapper">
       <main>
-          <div class="postersArea">
+          <div id="posterScroll" class="postersArea">
                     <div class="posters">
 
                       <div class="poster">
@@ -153,10 +164,8 @@
                         <img src="posters/poster1.jpg" alt="poster">
 
                         <div class="aboutPoster">
-                          <h3>Somthing</h3>
-                          <p>Tra d js jds djks kdj kjsda kjda dfkjs dkjsa dkja
-                            skjd askjd akjsd asdkj askjda skd askjd skaj
-                            dkajs dkasj dkaj dkja dsakj</p>
+                          <h3>The lord of the rings</h3>
+                          <p>The last movie of Peter Jackson.</p>
                         </div>
 
                       </div>
@@ -166,11 +175,9 @@
                         <img src="posters/poster2.jpg" alt="poster">
 
                         <div class="aboutPoster">
-                          <h3>Somthing</h3>
-                          <p>Tra d js jds djks kdj kjsda kjda dfkjs dkjsa dkja
-                            skjd askjd akjsd asdkj askjda skd askjd skaj
-                            dkajs dkasj dkaj dkja dsakj</p>
-                        </div>
+                            <h3>The lord of the rings</h3>
+                            <p>The last movie of Peter Jackson.</p>
+                          </div>
 
                       </div>
 
@@ -179,14 +186,35 @@
                         <img src="posters/poster3.jpg" alt="poster">
 
                         <div class="aboutPoster">
-                          <h3>Somthing</h3>
-                          <p>Tra d js jds djks kdj kjsda kjda dfkjs dkjsa dkja
-                            skjd askjd akjsd asdkj askjda skd askjd skaj
-                            dkajs dkasj dkaj dkja dsakj</p>
-                        </div>
+                            <h3>The lord of the rings</h3>
+                            <p>The last movie of Peter Jackson.</p>
+                          </div>
 
                       </div>
 
+                      <!-- B -->
+                      <div class="poster">
+                        <img src="posters/poster1.jpg" alt="poster">
+                        <div class="aboutPoster">
+                            <h3>The lord of the rings</h3>
+                            <p>The last movie of Peter Jackson.</p>
+                          </div>
+                      </div>
+                      <div class="poster">
+                        <img src="posters/poster1.jpg" alt="poster">
+                        <div class="aboutPoster">
+                            <h3>The lord of the rings</h3>
+                            <p>The last movie of Peter Jackson.</p>
+                          </div>
+                      </div>
+                      <div class="poster">
+                        <img src="posters/poster1.jpg" alt="poster">
+                        <div class="aboutPoster">
+                            <h3>The lord of the rings</h3>
+                            <p>The last movie of Peter Jackson.</p>
+                          </div>
+                      </div>
+                      <!-- A -->
                     </div>
 
                     <p class="seemore">

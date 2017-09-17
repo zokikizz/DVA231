@@ -23,6 +23,7 @@ header {
 }
 
 .headerWraper {
+  height: 95px;
   width: 100%;
   background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
   display: flex;
@@ -84,7 +85,9 @@ header {
 
 
 .upperHeaderLeft {
+  height: 30px;
   width: 140%;
+  padding: 7px 0 7px 0px;
   display: flex;
 }
 
@@ -140,6 +143,7 @@ header {
 }
 
 .line {
+  padding: 0px 6px 0 10px;
   font-style: normal;
   color: #888;
 }
@@ -157,7 +161,7 @@ header {
 .imageLinks {
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
+  width: 50%;
   margin-left: 10%;
 
 }
@@ -264,20 +268,26 @@ header {
 }
 
 main {
-  width: 65%;
+  width: 61%;
   border-right: solid 3px #999;
 }
 
 /*posters*/
 
-
+#posterScroll::-webkit-scrollbar { 
+  display: none; 
+}
 
 .postersArea {
+  height: 305px;
   width: 100%;
   background-color: #333;
   color: #747474;
   box-sizing: border-box;
   padding: 20px;
+  display: inline-block;
+  overflow-y: scroll;
+
 }
 
 .postersAreaMargins {
@@ -285,8 +295,8 @@ main {
 }
 
 .posters {
-  display: flex;
-  justify-content: space-between;
+  width: inherit;
+  display: inline;
   margin-bottom: 10px;
 }
 
@@ -299,14 +309,16 @@ main {
 /* Animations */
 
 .poster {
+  width: 180px;
+  margin: 1px 5px 15px 10px;
   position: relative;
-  overflow: hidden;
+  display: inline-flex;
 }
 
 .aboutPoster {
-  background-color: rgba(78, 78, 78, 0.86);
+  background-color: rgba(0,0,0,0.7);
   position: absolute;
-  top: calc(100% - 50px);
+  top: calc(100% - 47px);
   transition: all 1s cubic-bezier(0, 0, 0, 1.02);
 }
 
@@ -322,7 +334,9 @@ main {
 }
 
 /*End of animation */
-
+.seemore {
+  margin-left: 10px;
+}
 .seemore::after {
     content: "\0000a0\0000bb";
     color: gray;
@@ -396,7 +410,7 @@ main {
 /*Aside*/
 
 aside {
-  width: 35%;
+  width: 40%;
   display: flex;
   background-color: #f0f0f0;
   padding: 0 20px;
