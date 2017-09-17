@@ -208,6 +208,10 @@ header {
   background: linear-gradient(to bottom, #333333 15%,#505050 50%,#333333 85%);
 }
 
+.oneDropDown:hover .dropdown-menu {
+display: inline-flex;
+}
+
 .grayBar {
   border-width: 1px;
   border-style: solid;
@@ -259,7 +263,16 @@ header {
   font-size: 11px;
 }
 
+.trailer {
+  height: 2.7%;
+  text-decoration: none;
+  background-color: #333;
+}
 
+.trailer p a {
+  padding-left: 3%;
+  color: #63C9FF;
+}
 /*End of header*/
 
 
@@ -521,3 +534,56 @@ aside h3:hover {
 }
 
 /*Aside ends*/
+
+/*dropDown CSS*/
+
+.dropdown-menu {
+  display: none;
+  background-color: #f2f2f2 !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6) !important;
+  overflow: hidden !important;
+  height: 315px !important;
+  width: 875px;
+  left: 311px !important;
+  position: absolute !important;
+  top: 112px !important;
+}
+
+.multi-column-dropdown {
+	padding-left: 20px !important;
+}
+
+.multi-column-dropdown li {
+	list-style-type: none !important;
+    margin: 10px 0 0 !important;
+}
+
+.multi-column-dropdown li a {
+	color: #555;
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	white-space: normal;
+}
+
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	color: #262626;
+	background-color: #999;
+}
+
+.title {
+	color:#A58500 !important;
+}
+
+.dropdownPic1 {
+	background: url(posters/nav-pic1.jpg);
+	border-bottom-right-radius: 10px;
+	min-width: 410px;
+    min-height: 315px;
+    position: absolute;
+	right: -5px;
+	top: 0px;
+}
