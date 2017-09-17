@@ -180,6 +180,7 @@ header {
 }
 
 .dropDowns {
+  margin-top: 5px;
   display: flex;
   width: 140%;
 }
@@ -190,6 +191,10 @@ header {
   width: 25%;
   align-items: center;
   justify-content: center;
+}
+
+.lastDropDown {
+  width: 20%;
 }
 
 .oneDropDown a {
