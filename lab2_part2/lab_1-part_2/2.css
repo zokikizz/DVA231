@@ -264,9 +264,8 @@ display: inline-flex;
 }
 
 .trailer {
-  height: 2.7%;
+  height: 10%;
   text-decoration: none;
-  background-color: #333;
 }
 
 .trailer p a {
@@ -298,15 +297,11 @@ main {
 }
 
 .postersArea {
-  height: 305px;
+  height: 310px;
   width: 100%;
   background-color: #333;
   color: #747474;
   box-sizing: border-box;
-  padding: 20px;
-  display: inline-block;
-  overflow-y: scroll;
-
 }
 
 .postersAreaMargins {
@@ -314,9 +309,12 @@ main {
 }
 
 .posters {
+  height: 88%;
   width: inherit;
-  display: inline;
   margin-bottom: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 15px 5px 0px 20px;
 }
 
 
@@ -548,7 +546,8 @@ aside h3:hover {
   width: 875px;
   left: 311px !important;
   position: absolute !important;
-  top: 112px !important;
+  top: 111px !important;
+  z-index: 999;
 }
 
 .multi-column-dropdown {
