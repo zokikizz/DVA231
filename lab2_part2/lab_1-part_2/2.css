@@ -53,7 +53,7 @@ header {
 .upperHeader {
   display: flex;
   height: 45%;
-
+  padding-top: 1%;
 }
 
 #namanyay-search-box {
@@ -111,7 +111,7 @@ header {
 .imdbPro {
   font-family: 'Oswald', sans-serif;
   display: flex;
-  width: 20%;
+  width: 30%;
 }
 
 .imdbPro:hover {
@@ -173,9 +173,11 @@ header {
 .bottomHeader {
   display: flex;
   justify-content: flex-start;
+  padding-bottom: 1%;
 }
 
 .dropDowns {
+  margin-top: 5px;
   display: flex;
   width: 140%;
 }
@@ -188,6 +190,10 @@ header {
   justify-content: center;
 }
 
+.lastDropDown {
+  width: 20%;
+}
+
 .oneDropDown a {
   text-decoration: none;
   color: white;
@@ -196,6 +202,10 @@ header {
 .oneDropDown:hover {
   text-decoration: underline;
   background: linear-gradient(to bottom, #333333 15%,#505050 50%,#333333 85%);
+}
+
+.oneDropDown:hover .dropdown-menu {
+display: inline-flex;
 }
 
 .grayBar {
@@ -304,7 +314,7 @@ main {
 }
 
 .aboutPoster {
-  background-color: rgba(78, 78, 78, 0.86);
+  background-color: rgba(0,0,0,0.7);
   position: absolute;
   top: calc(100% - 50px);
   transition: all 1s cubic-bezier(0, 0, 0, 1.02);
@@ -386,6 +396,11 @@ main {
 }
 
 .imagesInArtice video {
+  max-width: 49%;
+  object-fit: contain;
+}
+
+.imagesInArtice iframe {
   max-width: 49%;
   object-fit: contain;
 }
@@ -501,3 +516,79 @@ aside h3:hover {
 }
 
 /*Aside ends*/
+
+
+
+/* Hector */
+
+
+/*dropDown CSS*/
+
+.dropdown-menu {
+  display: none;
+  background-color: #f2f2f2 !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6) !important;
+  overflow: hidden !important;
+  height: 315px !important;
+  width: 875px;
+  left: 311px !important;
+  position: absolute !important;
+  top: 106px !important;
+  z-index: 999;
+}
+
+.multi-column-dropdown {
+	padding-left: 20px !important;
+}
+
+.multi-column-dropdown li {
+	list-style-type: none !important;
+  margin: 10px 0 0 !important;
+}
+
+.multi-column-dropdown li a {
+	color: #555;
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	white-space: normal;
+}
+
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	color: #262626;
+	background-color: #999;
+}
+
+.title {
+	color:#A58500 !important;
+}
+
+.dropdownPic1 {
+	background: url(posters/nav-pic1.jpg);
+	border-bottom-right-radius: 10px;
+	min-width: 410px;
+  min-height: 315px;
+  position: absolute;
+	right: -5px;
+	top: 0px;
+}
+
+
+/* posters adaptaion to jquery's slick mess*/
+
+.poster {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.poster-content-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.spacer {
+  flex: auto;
+}
