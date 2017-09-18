@@ -23,7 +23,6 @@ header {
 }
 
 .headerWraper {
-  height: 95px;
   width: 100%;
   background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
   display: flex;
@@ -85,9 +84,7 @@ header {
 
 
 .upperHeaderLeft {
-  height: 30px;
   width: 140%;
-  padding: 7px 0 7px 0px;
   display: flex;
 }
 
@@ -118,7 +115,6 @@ header {
 }
 
 .imdbPro:hover {
-  width: 70px;
   background: linear-gradient(to bottom, #333333 15%,#505050 50%,#333333 85%);
 }
 
@@ -144,7 +140,6 @@ header {
 }
 
 .line {
-  padding: 0px 6px 0 10px;
   font-style: normal;
   color: #888;
 }
@@ -162,7 +157,7 @@ header {
 .imageLinks {
   display: flex;
   justify-content: space-evenly;
-  width: 50%;
+  width: 40%;
   margin-left: 10%;
 
 }
@@ -264,15 +259,7 @@ display: inline-flex;
   font-size: 11px;
 }
 
-.trailer {
-  height: 10%;
-  text-decoration: none;
-}
 
-.trailer p a {
-  padding-left: 3%;
-  color: #63C9FF;
-}
 /*End of header*/
 
 
@@ -287,22 +274,20 @@ display: inline-flex;
 }
 
 main {
-  width: 61%;
+  width: 65%;
   border-right: solid 3px #999;
 }
 
 /*posters*/
 
-#posterScroll::-webkit-scrollbar {
-  display: none;
-}
+
 
 .postersArea {
-  height: 310px;
   width: 100%;
   background-color: #333;
   color: #747474;
   box-sizing: border-box;
+  padding: 20px;
 }
 
 .postersAreaMargins {
@@ -310,12 +295,9 @@ main {
 }
 
 .posters {
-  height: 88%;
-  width: auto;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
-  box-sizing: border-box;
-  display: inline-block;
-  margin: 15px 5px 0px 20px;
 }
 
 
@@ -327,16 +309,14 @@ main {
 /* Animations */
 
 .poster {
-  width: 180px;
-  margin: 1px 5px 15px 10px;
   position: relative;
-  display: inline-flex;
+  overflow: hidden;
 }
 
 .aboutPoster {
   background-color: rgba(0,0,0,0.7);
   position: absolute;
-  top: calc(100% - 47px);
+  top: calc(100% - 50px);
   transition: all 1s cubic-bezier(0, 0, 0, 1.02);
 }
 
@@ -352,9 +332,7 @@ main {
 }
 
 /*End of animation */
-.seemore {
-  margin-left: 10px;
-}
+
 .seemore::after {
     content: "\0000a0\0000bb";
     color: gray;
@@ -433,7 +411,7 @@ main {
 /*Aside*/
 
 aside {
-  width: 40%;
+  width: 35%;
   display: flex;
   background-color: #f0f0f0;
   padding: 0 20px;
@@ -539,14 +517,11 @@ aside h3:hover {
 
 /*Aside ends*/
 
-<<<<<<< HEAD
 
 
 /* Hector */
 
 
-=======
->>>>>>> cc33dc2610ff1fbcb1183d692f03eed220bafaf4
 /*dropDown CSS*/
 
 .dropdown-menu {
@@ -560,11 +535,7 @@ aside h3:hover {
   width: 875px;
   left: 311px !important;
   position: absolute !important;
-<<<<<<< HEAD
   top: 106px !important;
-=======
-  top: 111px !important;
->>>>>>> cc33dc2610ff1fbcb1183d692f03eed220bafaf4
   z-index: 999;
 }
 
