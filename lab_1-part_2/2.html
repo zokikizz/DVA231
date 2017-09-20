@@ -266,8 +266,11 @@
 
 
                     <div class="posters">
-
-                        <div class="poster">
+						
+						<div class="posterWrapper">
+                        
+						
+						<div id="poster1" class="poster">
                           <div class="poster-content-wrapper">
                             <img src="posters/poster1.jpg" alt="poster">
 
@@ -279,8 +282,7 @@
 
 
                             </div>
-                            <div class="spacer"><!--work around jquery's auto width calculation-->
-                          </div>
+                            
 
                         </div>
 
@@ -299,8 +301,7 @@
 
 
                             </div>
-                            <div class="spacer"><!--work around jquery's auto width calculation-->
-                          </div>
+                            
 
                         </div>
 
@@ -319,70 +320,147 @@
 
 
                             </div>
-                            <div class="spacer"><!--work around jquery's auto width calculation-->
-                          </div>
+                           
 
                           </div>
+						  
+						 </div>
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 <div class="posterWrapper">
+                        
+						
+						<div id="poster1" class="poster">
+                          <div class="poster-content-wrapper">
+                            <img src="posters/poster3.jpg" alt="poster">
 
-
-
-
-                          <div class="poster">
-                            <div class="poster-content-wrapper">
-                              <img src="posters/poster4.jpg" alt="poster">
-
-                              <div class="aboutPoster">
-                                <h3>The lord of the Rings I</h3>
-                                <p>Frodo and company. More infromation part, where
-                                we can read more information about this poster.</p>
-                              </div>
-
-
-                              </div>
-                              <div class="spacer"><!--work around jquery's auto width calculation-->
+                            <div class="aboutPoster">
+                              <h3>The Lord of the Rings I</h3>
+                              <p>Frodo and company. More infromation part, where
+                              we can read more information about this poster.</p>
                             </div>
+
+
+                            </div>
+                           
+
+                        </div>
+
+
+
+                        <div class="poster">
+
+                          <div class="poster-content-wrapper">
+                            <img src="posters/poster6.jpg" alt="poster">
+
+                            <div class="aboutPoster">
+                              <h3>The lord of the Rings II</h3>
+                              <p>Frodo and company. More infromation part, where
+                              we can read more information about this poster.</p>
+                            </div>
+
+
+                            </div>
+                            
+
+                        </div>
+
+
+
+                        <div class="poster">
+
+                          <div class="poster-content-wrapper">
+                            <img src="posters/poster2.jpg" alt="poster">
+
+                            <div class="aboutPoster">
+                              <h3>The lord of the Rings III</h3>
+                              <p>Frodo and company. More infromation part, where
+                              we can read more information about this poster.</p>
+                            </div>
+
+
+                            </div>
+                           
 
                           </div>
+						  
+						 </div>
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 <div class="posterWrapper">
+                        
+						
+						<div id="poster1" class="poster">
+                          <div class="poster-content-wrapper">
+                            <img src="posters/poster4.jpg" alt="poster">
 
-
-
-                          <div class="poster">
-
-                            <div class="poster-content-wrapper">
-                              <img src="posters/poster5.jpg" alt="poster">
-
-                              <div class="aboutPoster">
-                                <h3>The lord of the Rings II</h3>
-                                <p>Frodo and company. More infromation part, where
-                                we can read more information about this poster.</p>
-                              </div>
-
-
-                              </div>
-                              <div class="spacer"><!--work around jquery's auto width calculation-->
+                            <div class="aboutPoster">
+                              <h3>The Lord of the Rings I</h3>
+                              <p>Frodo and company. More infromation part, where
+                              we can read more information about this poster.</p>
                             </div>
 
+
+                            </div>
+                           
+
+                        </div>
+
+
+
+                        <div class="poster">
+
+                          <div class="poster-content-wrapper">
+                            <img src="posters/poster5.jpg" alt="poster">
+
+                            <div class="aboutPoster">
+                              <h3>The lord of the Rings II</h3>
+                              <p>Frodo and company. More infromation part, where
+                              we can read more information about this poster.</p>
+                            </div>
+
+
+                            </div>
+                           
+
+                        </div>
+
+
+
+                        <div class="poster">
+
+                          <div class="poster-content-wrapper">
+                            <img src="posters/poster6.jpg" alt="poster">
+
+                            <div class="aboutPoster">
+                              <h3>The lord of the Rings III</h3>
+                              <p>Frodo and company. More infromation part, where
+                              we can read more information about this poster.</p>
+                            </div>
+
+
+                            </div>
+                           
                           </div>
+						  
+						 </div>
 
 
 
-                          <div class="poster">
+						
+				
 
-                            <div class="poster-content-wrapper">
-                              <img src="posters/poster6.jpg" alt="poster">
-
-                              <div class="aboutPoster">
-                                <h3>The lord of the Rings III</h3>
-                                <p>Frodo and company. More infromation part, where
-                                we can read more information about this poster.</p>
-                              </div>
-
-
-                              </div>
-                              <div class="spacer"><!--work around jquery's auto width calculation-->
-                            </div>
-
-                            </div>
 
 
 
@@ -662,14 +740,26 @@
 
     <script>
 
-        $('.posters').slick({
-          slidesToShow: 3,
+        $('.posterWrapper').slick({
+          slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 2000,
           dots:false,
-          arrows: false,
+          arrows: false
         });
+		
+		/*$('#poster1').mouseover(function() {
+			$('.current').slick({
+			swipe: false
+			})
+		});*/
+		
+		$('.js-slick-slider').hover( function(){
+			$(this).slick('slickPause');
+			}, function(){
+    $(this).slick('slickPlay')
+		});
 
 
   </script>

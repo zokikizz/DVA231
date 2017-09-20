@@ -396,6 +396,10 @@ main {
   align-items: flex-start;
 }
 
+.posterWrapper {
+	width: 32% !important;
+}
+
 .imagesInArtice img {	
   height: 152px;
   max-width: 49%;
