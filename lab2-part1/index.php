@@ -269,10 +269,11 @@
               ?>
                 </p>
 
-               <form class="facebookSingIn" action="logOutProcess.php" method="post">
-                 <input type="hidden" name="logOut" value="logOut">
-                 <input class="logOutButton" type="submit" name="logOut" value="Log out">
-               </form>
+               <div class="facebookSingIn" >
+
+
+                  <button class="logOutButton" onCLick="lol()" type="button" name="logOut" name="button">Log out</button>
+               </div>
 
                <?php
              }
@@ -708,6 +709,10 @@
           dots:false,
           arrows: false,
         });
+
+        function lol(){
+          window.location.replace("logOutProcess.php");
+        }
 
 
   </script>

@@ -397,6 +397,7 @@ main {
 }
 
 .imagesInArtice img {
+  height: 152px;
   max-width: 49%;
   object-fit: contain;
 }
@@ -597,4 +598,12 @@ aside h3:hover {
 
 .spacer {
   flex: auto;
+}
+
+
+
+ .logOutButton {
+  background:  #3B5998;
+  border: none !important;
+  color: white !important;
 }

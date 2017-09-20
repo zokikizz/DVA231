@@ -1,8 +1,6 @@
 <?php
   session_start();
-
-  if($_REQUEST['logOut'] != NULL)
-    $_SESSION['username'] = NULL;
+  session_destroy();
 
   header("Location: http://lab/index.php");
 
