@@ -252,6 +252,12 @@ display: inline-flex;
 }
 
 
+.form * {
+  background: transparent;
+  border: none;
+}
+
+
 .commonLink {
   text-decoration: underline;
   width: 41%;
