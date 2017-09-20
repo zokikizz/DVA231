@@ -396,7 +396,8 @@ main {
   align-items: flex-start;
 }
 
-.imagesInArtice img {
+.imagesInArtice img {	
+  height: 152px;
   max-width: 49%;
   object-fit: contain;
 }
