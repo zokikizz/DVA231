@@ -267,7 +267,7 @@
 
                     <div class="posters">
 						
-						<div class="posterWrapper">
+						<div class="posterWrapper" id="p1">
                         
 						
 						<div id="poster1" class="poster">
@@ -332,64 +332,64 @@
 						 
 						 
 						 
-						 <div class="posterWrapper">
+						<div class="posterWrapper">
                         
 						
-						<div id="poster1" class="poster">
-                          <div class="poster-content-wrapper">
-                            <img src="posters/poster3.jpg" alt="poster">
+							<div id="poster1" class="poster">
+							  <div class="poster-content-wrapper">
+								<img src="posters/poster3.jpg" alt="poster">
 
-                            <div class="aboutPoster">
-                              <h3>The Lord of the Rings I</h3>
-                              <p>Frodo and company. More infromation part, where
-                              we can read more information about this poster.</p>
-                            </div>
-
-
-                            </div>
-                           
-
-                        </div>
+								<div class="aboutPoster">
+								  <h3>The Lord of the Rings I</h3>
+								  <p>Frodo and company. More infromation part, where
+								  we can read more information about this poster.</p>
+								</div>
 
 
+								</div>
+							   
 
-                        <div class="poster">
-
-                          <div class="poster-content-wrapper">
-                            <img src="posters/poster6.jpg" alt="poster">
-
-                            <div class="aboutPoster">
-                              <h3>The lord of the Rings II</h3>
-                              <p>Frodo and company. More infromation part, where
-                              we can read more information about this poster.</p>
-                            </div>
-
-
-                            </div>
-                            
-
-                        </div>
+							</div>
 
 
 
-                        <div class="poster">
+							<div class="poster">
 
-                          <div class="poster-content-wrapper">
-                            <img src="posters/poster2.jpg" alt="poster">
+							  <div class="poster-content-wrapper">
+								<img src="posters/poster6.jpg" alt="poster">
 
-                            <div class="aboutPoster">
-                              <h3>The lord of the Rings III</h3>
-                              <p>Frodo and company. More infromation part, where
-                              we can read more information about this poster.</p>
-                            </div>
+								<div class="aboutPoster">
+								  <h3>The lord of the Rings II</h3>
+								  <p>Frodo and company. More infromation part, where
+								  we can read more information about this poster.</p>
+								</div>
 
 
-                            </div>
-                           
+								</div>
+								
 
-                          </div>
-						  
-						 </div>
+							</div>
+
+
+
+							<div class="poster">
+
+							  <div class="poster-content-wrapper">
+								<img src="posters/poster2.jpg" alt="poster">
+
+								<div class="aboutPoster">
+								  <h3>The lord of the Rings III</h3>
+								  <p>Frodo and company. More infromation part, where
+								  we can read more information about this poster.</p>
+								</div>
+
+
+								</div>
+							   
+
+							  </div>
+							  
+							 </div>
 						 
 						 
 						 
@@ -560,7 +560,7 @@
 
 
           </div>
-
+`
 
       </main>
 
@@ -740,26 +740,49 @@
 
     <script>
 
+
+	  var isPosterRotating = [];
+	  var posterCount = 3;
+	  for(let i = 0; i < posterCount; i++) {
+		isPosterRotating[i] = true;
+	  }
+      setInterval(playNext, 2000);
+ 
+	var posterDivs = $('.posterWrapper');
         $('.posterWrapper').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 2000,
           dots:false,
           arrows: false
         });
+ 
+      function playNext() {
+        for(let i = 0; i <= 2; i++) {
+          if(isPosterRotating[i]) {
+			$(posterDivs[i]).slick('slickNext');
+          }
+        }
+        
+ 
+      }
+ 
+      $('.posterWrapper').hover(function() {
+		for(let i = 0; i < posterCount; i++) {
+			if(this === posterDivs[i]) {
+				isPosterRotating[i] = false;
+			}
+		}
+      }, function() {
+        for(let i = 0; i < posterCount; i++) {
+			if(this === posterDivs[i]) {
+				isPosterRotating[i] = true;
+			}
+		}
+      });
 		
-		/*$('#poster1').mouseover(function() {
-			$('.current').slick({
-			swipe: false
-			})
-		});*/
 		
-		$('.js-slick-slider').hover( function(){
-			$(this).slick('slickPause');
-			}, function(){
-    $(this).slick('slickPlay')
-		});
 
 
   </script>
