@@ -1,22 +1,36 @@
 <?php
+    include 'objects/movie.php';
+
     session_start();
+
+    $movieArray = array();
+
+    for($i = 0; $i < 6; $i++)
+      array_push($movieArray,
+      new movie("movie no" . ($i+1), "Details: number of movie is" . ($i+1),
+      'posters/poster'.($i+1).'.jpg' ));
+
+
+
+
+
     //Start our session.
-  
+
     //Expire the session if user is inactive for 30
     //minutes or more.
     $expireAfter = 1;
-  
+
     //Check to see if our "last action" session
     //variable has been set.
     if(isset($_SESSION['last_action'])){
-     
+
          //Figure out how many seconds have passed
          //since the user was last active.
          $secondsInactive = time() - $_SESSION['last_action'];
-     
+
          //Convert our minutes into seconds.
          $expireAfterSeconds = $expireAfter * 60;
-     
+
          //Check to see if they have been inactive for too long.
          if($secondsInactive >= $expireAfterSeconds){
            //User has been inactive for too long.
@@ -26,7 +40,7 @@
            Header('Location: '.$_SERVER['PHP_SELF']);
         }
     }
-  
+
     //Assign the current timestamp as the user's
     //latest activity
     $_SESSION['last_action'] = time();
@@ -336,11 +350,54 @@
 
                     <div class="posters">
 
+                <?php
+                    for($i = 0; $i < 6; $i++){
+                ?>
+
+                <div class="poster">
+                  <div class="poster-content-wrapper">
+
+                    <div class="click-star poster1">
+                      <a class="fa fa-star-o transparentFavoritLink"
+                      href="./addToFavorits.php?movieName= <?php echo $movieArray[$i]->name; ?> "></a>
+                    </div>
+
+                    <img src="<?php echo $movieArray[$i]->posterUrl; ?> " alt="poster">
+
+                    <div class="aboutPoster">
+                      <h3><?php   echo $movieArray[$i]->name; ?></h3>
+                      <p> <?php echo $movieArray[$i]->description; ?> </p>
+                    </div>
+
+
+                    </div>
+                    <div class="spacer"><!--work around jquery's auto width calculation-->
+                  </div>
+
+                </div>
+
+              <?php } ?>
+
+              <!--
+
+
+
+
+
+
+
+
+
+
+
                         <div class="poster">
                           <div class="poster-content-wrapper">
-                          <div class="click-star poster1">
-                          <span class="fa fa-star-o"></span>	                      
-                        </div>
+
+                            <div class="click-star poster1">
+                              <a class="fa fa-star-o transparentFavoritLink"
+                              href="./addToFavorits.php?movieName=First+of+dead"></a>
+                            </div>
+
                             <img src="posters/poster1.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -351,7 +408,7 @@
 
 
                             </div>
-                            <div class="spacer"><!--work around jquery's auto width calculation-->
+                            <div class="spacer">
                           </div>
 
                         </div>
@@ -361,9 +418,11 @@
                         <div class="poster">
 
                           <div class="poster-content-wrapper">
-                          <div class="click-star poster2">
-                          <span class="fa fa-star-o"></span>	                      
-                        </div>
+
+                            <div class="click-star poster1">
+                              <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
+                            </div>
+
                             <img src="posters/poster2.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -374,7 +433,7 @@
 
 
                             </div>
-                            <div class="spacer"><!--work around jquery's auto width calculation-->
+                            <div class="spacer">
                           </div>
 
                         </div>
@@ -384,9 +443,11 @@
                         <div class="poster">
 
                           <div class="poster-content-wrapper">
-                            <div class="click-star poster3">
-                            <span class="fa fa-star-o"></span>	                      
+
+                            <div class="click-star poster1">
+                              <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
                             </div>
+
                             <img src="posters/poster3.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -397,7 +458,7 @@
 
 
                             </div>
-                            <div class="spacer"><!--work around jquery's auto width calculation-->
+                            <div class="spacer">
                           </div>
 
                           </div>
@@ -407,9 +468,11 @@
 
                           <div class="poster">
                             <div class="poster-content-wrapper">
-                              <div class="click-star poster4">
-                              <span class="fa fa-star-o"></span>	                      
+
+                              <div class="click-star poster1">
+                                <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
                               </div>
+
                               <img src="posters/poster4.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -420,7 +483,7 @@
 
 
                               </div>
-                              <div class="spacer"><!--work around jquery's auto width calculation-->
+                              <div class="spacer">
                             </div>
 
                           </div>
@@ -430,9 +493,11 @@
                           <div class="poster">
 
                             <div class="poster-content-wrapper">
-                              <div class="click-star poster5">
-                              <span class="fa fa-star-o"></span>	                      
+
+                              <div class="click-star poster1">
+                                <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
                               </div>
+
                               <img src="posters/poster5.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -443,7 +508,7 @@
 
 
                               </div>
-                              <div class="spacer"><!--work around jquery's auto width calculation-->
+                              <div class="spacer">
                             </div>
 
                           </div>
@@ -451,11 +516,13 @@
 
 
                           <div class="poster">
-    
+
                             <div class="poster-content-wrapper">
-                              <div class="click-star poster6">
-                                <span class="fa fa-star-o"></span>	                      
+
+                              <div class="click-star poster1">
+                                <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
                               </div>
+
                               <img src="posters/poster6.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -466,7 +533,7 @@
 
 
                               </div>
-                              <div class="spacer"><!--work around jquery's auto width calculation-->
+                              <div class="spacer">
                             </div>
 
                             </div>
@@ -479,7 +546,7 @@
 
 
 
-
+                          -->
 
                     </div>
 
@@ -492,31 +559,9 @@
 
           </div>
 
-          <div class="articleArea">
 
-            <h1>It's Emmys Week: Unforgettable Emmy Photos</h1>
-
-            <p>
-              Rewind with some of the most memorable photos
-              from past Primetime Emmy Awards.
-              Join us Sunday for IMDb LIVE After
-              the Emmys for exclusive winners interviews and more.
-            </p>
-
-            <div class="imagesInArtice">
-
-              <!--<img src="photo/got.jpg" alt="gotimage">-->
-              <iframe src="https://www.youtube.com/embed/1Mlhnt0jMlg"
-              frameborder="0" allowfullscreen></iframe>
-
-              <img src="photo/got1.jpg" alt="gotimage">
-
-            </div>
-
-            <p class="seemore"><a href="#">See more</a></p>
-
-
-          </div>
+          <?php
+          for($i=0; $i < 3; $i++) { ?>
 
           <div class="articleArea">
 
@@ -544,31 +589,7 @@
 
           </div>
 
-          <div class="articleArea">
-
-            <h1>It's Emmys Week: Unforgettable Emmy Photos</h1>
-
-            <p>
-              Rewind with some of the most memorable photos
-              from past Primetime Emmy Awards.
-              Join us Sunday for IMDb LIVE After
-              the Emmys for exclusive winners interviews and more.
-            </p>
-
-            <div class="imagesInArtice">
-
-              <!--<img src="photo/got.jpg" alt="gotimage">-->
-              <iframe src="https://www.youtube.com/embed/1Mlhnt0jMlg"
-              frameborder="0" allowfullscreen></iframe>
-
-              <img src="photo/got1.jpg" alt="gotimage">
-
-            </div>
-
-            <p class="seemore"><a href="#">See more</a></p>
-
-
-          </div>
+        <?php } ?>
 
 
       </main>
@@ -748,7 +769,7 @@
     </div>
 
     <script>
-        
+
         $('.posters').slick({
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -775,7 +796,7 @@
             setTimeout(function() {
               $('.poster1 span').addClass('fa-star')
               $('.poster1 span').removeClass('fa-star-o')
-            }, 150)           
+            }, 150)
           }
       })
 
