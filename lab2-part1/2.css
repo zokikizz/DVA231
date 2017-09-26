@@ -590,6 +590,7 @@ aside h3:hover {
 .poster {
   display: flex !important;
   flex-direction: row;
+  outline:none !important;
 }
 
 .poster-content-wrapper {
