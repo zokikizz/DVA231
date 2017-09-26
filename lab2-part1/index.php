@@ -314,7 +314,7 @@
                 </p>
 
                <div class="facebookSingIn" >
-                  <button class="logOutButton" onCLick="logOut()" type="button" name="logOut" name="button">Log out</button>
+                  <button class="logOutButton" onCLick="logOut()" type="submit" name="submit" name="button">Log out</button>
                </div>
 
                <?php
@@ -355,10 +355,17 @@
                 <div class="poster">
                   <div class="poster-content-wrapper">
 
+                    <?php
+                    if( isset($_SESSION['username']))
+                    {
+                      ?>
                     <div class="click-star poster1">
                       <a class="fa fa-star-o transparentFavoritLink"
                       href="./addToFavorites.php?movieName= <?php echo $movieArray[$i]->name; ?> "></a>
                     </div>
+                    <?php
+                    }
+                   ?>
 
                     <img src="<?php echo $movieArray[$i]->posterUrl; ?> " alt="poster">
 
@@ -778,7 +785,7 @@
         });
 
         function logOut(){
-          window.location.replace("lab/logOutProcess.php");
+          window.location.replace("logOutProcess.php");
         }
 
         $('.poster1').click(function() {
