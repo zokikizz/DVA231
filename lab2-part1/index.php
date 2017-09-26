@@ -338,6 +338,9 @@
 
                         <div class="poster">
                           <div class="poster-content-wrapper">
+                          <div class="click-star poster1">
+                          <span class="fa fa-star-o"></span>	                      
+                        </div>
                             <img src="posters/poster1.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -358,6 +361,9 @@
                         <div class="poster">
 
                           <div class="poster-content-wrapper">
+                          <div class="click-star poster2">
+                          <span class="fa fa-star-o"></span>	                      
+                        </div>
                             <img src="posters/poster2.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -378,6 +384,9 @@
                         <div class="poster">
 
                           <div class="poster-content-wrapper">
+                            <div class="click-star poster3">
+                            <span class="fa fa-star-o"></span>	                      
+                            </div>
                             <img src="posters/poster3.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -398,6 +407,9 @@
 
                           <div class="poster">
                             <div class="poster-content-wrapper">
+                              <div class="click-star poster4">
+                              <span class="fa fa-star-o"></span>	                      
+                              </div>
                               <img src="posters/poster4.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -418,6 +430,9 @@
                           <div class="poster">
 
                             <div class="poster-content-wrapper">
+                              <div class="click-star poster5">
+                              <span class="fa fa-star-o"></span>	                      
+                              </div>
                               <img src="posters/poster5.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -436,8 +451,11 @@
 
 
                           <div class="poster">
-
+    
                             <div class="poster-content-wrapper">
+                              <div class="click-star poster6">
+                                <span class="fa fa-star-o"></span>	                      
+                              </div>
                               <img src="posters/poster6.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -730,7 +748,7 @@
     </div>
 
     <script>
-
+        
         $('.posters').slick({
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -743,6 +761,23 @@
         function lol(){
           window.location.replace("logOutProcess.php");
         }
+
+        $('.poster1').click(function() {
+	        if ($('.poster1 span').hasClass("fa-star")) {
+			      $('.poster1').removeClass('active')
+
+          setTimeout(function() {
+            $('.poster1 span').removeClass('fa-star')
+            $('.poster1 span').addClass('fa-star-o')
+          }, 15)
+          } else {
+            $('.poster1').addClass('active')
+            setTimeout(function() {
+              $('.poster1 span').addClass('fa-star')
+              $('.poster1 span').removeClass('fa-star-o')
+            }, 150)           
+          }
+      })
 
 
   </script>
