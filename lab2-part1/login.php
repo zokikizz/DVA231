@@ -24,19 +24,26 @@
         </div>
 
         <div class="inputPart">
-          <span>Username:</span>
+          <div>Username:</div>
           <input type="text" name="username" placeholder="username">
-          <span>Password:</span>
+          <div>Password:</div>
           <input type="text" name="password" placeholder="password">
-          <!--<input type="submit" name="submit" value="Login">-->
-          <button type="submit" name="submit">
+          <!--<input type="submit" name="submit" value="Login">
+          <button class="logInButton" onCLick="logIn()" type="button"
+           name="logIn" name="button">
             <i class="fa fa-sign-in" aria-hidden="true"></i>
           </button>
+           -->
+
+          <div class="loginButtonDiv" >
+            <button type="submit" name="submit">
+              <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+            </button>
+          </div>
 
         </div>
 
       </form>
-
 
 
 
