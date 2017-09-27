@@ -359,9 +359,11 @@
                     if( isset($_SESSION['username']))
                     {
                       ?>
-                    <div class="click-star poster1">
-                      <a class="fa fa-star-o transparentFavoritLink"
-                      href="./addToFavorites.php?movieName= <?php echo $movieArray[$i]->name; ?> "></a>
+                    <div class="poster1">
+            
+                      <a class="click-star transparentFavoritLink"
+                      href="./addToFavorites.php?movieName= <?php echo $movieArray[$i]->name; ?> "><span class="fa fa-star-o"></span></a>
+                      
                     </div>
                     <?php
                     }

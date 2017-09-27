@@ -6,7 +6,7 @@
 
   if(!isset($_SESSION['username']))
   {
-    header('Location: http://localhost/lab/index.php');
+    header('Location: http://localhost:8013/index.php');
   }
 
   ?>
