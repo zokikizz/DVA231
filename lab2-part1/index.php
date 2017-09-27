@@ -294,12 +294,12 @@
                     </i>
                   </span>
                   <span class="facebookSingInText">
-                    Sing in with Facebook
+                    Sign in with Facebook
                   </span>
                 </a>
 
                 <a class="commonLink" href="login.php">
-                  Other sing in options
+                  Other sign in options
                 </a>
 
               <?php
@@ -347,45 +347,7 @@
 
 
                     <div class="posters">
-
-                <?php
-                    for($i = 0; $i < 6; $i++){
-                ?>
-
-                <div class="poster">
-                  <div class="poster-content-wrapper">
-
-                    <?php
-                    if( isset($_SESSION['username']))
-                    {
-                      ?>
-                    <div class="poster1">
             
-                      <a class="click-star transparentFavoritLink"
-                      href="./addToFavorites.php?movieName= <?php echo $movieArray[$i]->name; ?> "><span class="fa fa-star-o"></span></a>
-                      
-                    </div>
-                    <?php
-                    }
-                   ?>
-
-                    <img src="<?php echo $movieArray[$i]->posterUrl; ?> " alt="poster">
-
-                    <div class="aboutPoster">
-                      <h3><?php   echo $movieArray[$i]->name; ?></h3>
-                      <p> <?php echo $movieArray[$i]->description; ?> </p>
-                    </div>
-
-
-                    </div>
-                    <div class="spacer"><!--work around jquery's auto width calculation-->
-                  </div>
-
-                </div>
-
-              <?php } ?>
-
-              <!--
 
 
 
@@ -400,11 +362,16 @@
                         <div class="poster">
                           <div class="poster-content-wrapper">
 
-                            <div class="click-star poster1">
-                              <a class="fa fa-star-o transparentFavoritLink"
-                              href="./addToFavorits.php?movieName=First+of+dead"></a>
-                            </div>
+                            <?php
+                            if (isset($_SESSION['username'])){
+                            ?>
 
+                            <div id="poster1" class="click-star" onclick="starButton('#poster1', ' The Lord of the Rings I ')">
+                              <span class="fa fa-star-o transparentFavoritLink"></span>
+                            </div>
+                            <?php
+                            }
+                            ?>
                             <img src="posters/poster1.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -426,10 +393,16 @@
 
                           <div class="poster-content-wrapper">
 
-                            <div class="click-star poster1">
-                              <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
-                            </div>
+                            <?php
+                            if (isset($_SESSION['username'])){
+                            ?>
 
+                            <div id="poster2" class="click-star" onclick="starButton('#poster2', ' The Lord of the Rings II ')">
+                            <span class="fa fa-star-o transparentFavoritLink"></span>
+                            </div>
+                            <?php
+                            }
+                            ?>
                             <img src="posters/poster2.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -450,11 +423,17 @@
                         <div class="poster">
 
                           <div class="poster-content-wrapper">
+                            
+                            <?php
+                            if (isset($_SESSION['username'])){
+                            ?>
 
-                            <div class="click-star poster1">
-                              <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
+                            <div id="poster3" class="click-star poster1" onclick="starButton('#poster3', ' The Lord of the Rings III ')">
+                            <span class="fa fa-star-o transparentFavoritLink"></span>
                             </div>
-
+                            <?php
+                            }
+                            ?>
                             <img src="posters/poster3.jpg" alt="poster">
 
                             <div class="aboutPoster">
@@ -475,11 +454,15 @@
 
                           <div class="poster">
                             <div class="poster-content-wrapper">
-
-                              <div class="click-star poster1">
-                                <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
+                            <?php
+                            if (isset($_SESSION['username'])){
+                            ?>
+                              <div  id="poster4" class="click-star poster1" onclick="starButton('#poster4', ' The Lord of the Rings 4 ')">
+                              <span class="fa fa-star-o transparentFavoritLink"></span>
                               </div>
-
+                              <?php
+                            }
+                            ?>
                               <img src="posters/poster4.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -500,11 +483,15 @@
                           <div class="poster">
 
                             <div class="poster-content-wrapper">
-
-                              <div class="click-star poster1">
-                                <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
+                            <?php
+                            if (isset($_SESSION['username'])){
+                            ?>
+                              <div id="poster5" class="click-star poster1" onclick="starButton('#poster5', ' The Lord of the Rings 5 ')">
+                                <span class="fa fa-star-o transparentFavoritLink"></span>
                               </div>
-
+                              <?php
+                            }
+                            ?>
                               <img src="posters/poster5.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -525,11 +512,15 @@
                           <div class="poster">
 
                             <div class="poster-content-wrapper">
-
-                              <div class="click-star poster1">
-                                <a class="fa fa-star-o transparentFavoritLink" href="#"></a>
+                            <?php
+                            if (isset($_SESSION['username'])){
+                            ?>
+                              <div  id="poster6" class="click-star poster1" onclick="starButton('#poster6', ' The Lord of the Rings 6 ')">
+                              <span class="fa fa-star-o transparentFavoritLink"></span>
                               </div>
-
+                              <?php
+                            }
+                            ?>
                               <img src="posters/poster6.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -553,7 +544,7 @@
 
 
 
-                          -->
+                        
 
                     </div>
 
@@ -790,22 +781,27 @@
           window.location.replace("logOutProcess.php");
         }
 
-        $('.poster1').click(function() {
-	        if ($('.poster1 span').hasClass("fa-star")) {
-			      $('.poster1').removeClass('active')
-
+        function starButton(id, name){
+	        if ($(id+' span').hasClass("fa-star")) {
+            //TRANSPARENT
+			      $(id).removeClass('active')
           setTimeout(function() {
-            $('.poster1 span').removeClass('fa-star')
-            $('.poster1 span').addClass('fa-star-o')
+            $(id+ ' span').removeClass('fa-star')
+            $(id+' span').addClass('fa-star-o')
           }, 15)
           } else {
-            $('.poster1').addClass('active')
+            //YELLOW
+            $(id).addClass('active')
             setTimeout(function() {
-              $('.poster1 span').addClass('fa-star')
-              $('.poster1 span').removeClass('fa-star-o')
+              $(id+' span').addClass('fa-star')
+              $(id+' span').removeClass('fa-star-o')
             }, 150)
+            //ADD ID TO COOKIE
+            //POST
+            window.location.replace("addToFavorites.php?movieName="+name);
           }
-      })
+    
+        }
 
 
   </script>
