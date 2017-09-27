@@ -21,7 +21,11 @@
 
       <h2>Movie<?php echo $_GET['movieName'] ?> is add to favorites!</h2>
       <a href="index.php" class="facebookSingIn">
-        <span class="facebookSingInText">
+        <span class="facebookSingInText" onclick="
+        <?php
+      $_SESSION['star'] = $_GET['movieName'];
+      ?>
+        ">
           Back
         </span>
       </a>

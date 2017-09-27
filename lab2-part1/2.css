@@ -641,6 +641,11 @@ span:active {
 	color: #F5CC27 !important;
 }
 
+.active {
+	color: #F5CC27 !important;
+}
+
+
 
 .transparentFavoritLink {
   background: transparent;

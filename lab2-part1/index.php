@@ -29,7 +29,7 @@
          $secondsInactive = time() - $_SESSION['last_action'];
 
          //Convert our minutes into seconds.
-         $expireAfterSeconds = $expireAfter * 60;
+         $expireAfterSeconds = $expireAfter * 600000;
 
          //Check to see if they have been inactive for too long.
          if($secondsInactive >= $expireAfterSeconds){
@@ -347,17 +347,6 @@
 
 
                     <div class="posters">
-            
-
-
-
-
-
-
-
-
-
-
 
                         <div class="poster">
                           <div class="poster-content-wrapper">
@@ -366,8 +355,18 @@
                             if (isset($_SESSION['username'])){
                             ?>
 
-                            <div id="poster1" class="click-star" onclick="starButton('#poster1', ' The Lord of the Rings I ')">
-                              <span class="fa fa-star-o transparentFavoritLink"></span>
+                            <div id="poster1" class="click-star" onclick="starButton('#poster1', 'The Lord of the Rings I')">
+                            <?php
+                            if(isset($_SESSION['star']) && $_SESSION['star'] == 'The Lord of the Rings I'){
+                            ?>
+                            <span class="active fa fa-star transparentFavoritLink"></span>
+                            <?php
+                            } else{
+                            ?>
+                            <span class="fa fa-star-o transparentFavoritLink"></span>
+                            <?php
+                            }
+                            ?>
                             </div>
                             <?php
                             }
@@ -375,10 +374,10 @@
                             <img src="posters/poster1.jpg" alt="poster">
 
                             <div class="aboutPoster">
-                              <h3>The Lord of the Rings I</h3>
-                              <p>Frodo and company. More infromation part, where
-                              we can read more information about this poster.</p>
-                            </div>
+                            <h3>The lord of the Rings I</h3>
+                            <p>Frodo and company. More infromation part, where
+                            we can read more information about this poster.</p>
+                          </div>
 
 
                             </div>
@@ -397,8 +396,18 @@
                             if (isset($_SESSION['username'])){
                             ?>
 
-                            <div id="poster2" class="click-star" onclick="starButton('#poster2', ' The Lord of the Rings II ')">
+                            <div id="poster2" class="click-star" onclick="starButton('#poster2', 'The Lord of the Rings II')">
+                            <?php
+                            if(isset($_SESSION['star']) && $_SESSION['star'] == 'The Lord of the Rings II'){
+                            ?>
+                            <span class="active fa fa-star transparentFavoritLink"></span>
+                            <?php
+                            } else{
+                            ?>
                             <span class="fa fa-star-o transparentFavoritLink"></span>
+                            <?php
+                            }
+                            ?>
                             </div>
                             <?php
                             }
@@ -428,8 +437,18 @@
                             if (isset($_SESSION['username'])){
                             ?>
 
-                            <div id="poster3" class="click-star poster1" onclick="starButton('#poster3', ' The Lord of the Rings III ')">
+                            <div id="poster3" class="click-star poster1" onclick="starButton('#poster3', 'The Lord of the Rings III')">
+                            <?php
+                            if(isset($_SESSION['star']) && $_SESSION['star'] == 'The Lord of the Rings III'){
+                            ?>
+                            <span class="active fa fa-star transparentFavoritLink"></span>
+                            <?php
+                            } else{
+                            ?>
                             <span class="fa fa-star-o transparentFavoritLink"></span>
+                            <?php
+                            }
+                            ?>
                             </div>
                             <?php
                             }
@@ -457,12 +476,22 @@
                             <?php
                             if (isset($_SESSION['username'])){
                             ?>
-                              <div  id="poster4" class="click-star poster1" onclick="starButton('#poster4', ' The Lord of the Rings 4 ')">
+                              <div  id="poster4" class="click-star poster1" onclick="starButton('#poster4', 'The Lord of the Rings 4')">
+                              <?php
+                              if(isset($_SESSION['star']) && $_SESSION['star'] == 'The Lord of the Rings 4'){
+                              ?>
+                              <span class="active fa fa-star transparentFavoritLink"></span>
+                              <?php
+                              } else{
+                              ?>
                               <span class="fa fa-star-o transparentFavoritLink"></span>
+                              <?php
+                              }
+                              ?>
                               </div>
                               <?php
-                            }
-                            ?>
+                              }
+                              ?>
                               <img src="posters/poster4.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -486,12 +515,22 @@
                             <?php
                             if (isset($_SESSION['username'])){
                             ?>
-                              <div id="poster5" class="click-star poster1" onclick="starButton('#poster5', ' The Lord of the Rings 5 ')">
-                                <span class="fa fa-star-o transparentFavoritLink"></span>
+                              <div id="poster5" class="click-star poster1" onclick="starButton('#poster5', 'The Lord of the Rings 5')">
+                              <?php
+                              if(isset($_SESSION['star']) && $_SESSION['star'] == 'The Lord of the Rings 5'){
+                              ?>
+                              <span class="active fa fa-star transparentFavoritLink"></span>
+                              <?php
+                              } else{
+                              ?>
+                              <span class="fa fa-star-o transparentFavoritLink"></span>
+                              <?php
+                              }
+                              ?>
                               </div>
                               <?php
-                            }
-                            ?>
+                              }
+                              ?>
                               <img src="posters/poster5.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -515,12 +554,22 @@
                             <?php
                             if (isset($_SESSION['username'])){
                             ?>
-                              <div  id="poster6" class="click-star poster1" onclick="starButton('#poster6', ' The Lord of the Rings 6 ')">
+                              <div  id="poster6" class="click-star poster1" onclick="starButton('#poster6', 'The Lord of the Rings 6')">
+                              <?php
+                              if(isset($_SESSION['star']) && $_SESSION['star'] == 'The Lord of the Rings 6'){
+                              ?>
+                              <span class="active fa fa-star transparentFavoritLink"></span>
+                              <?php
+                              } else{
+                              ?>
                               <span class="fa fa-star-o transparentFavoritLink"></span>
+                              <?php
+                              }
+                              ?>
                               </div>
                               <?php
-                            }
-                            ?>
+                              }
+                              ?>
                               <img src="posters/poster6.jpg" alt="poster">
 
                               <div class="aboutPoster">
@@ -789,6 +838,7 @@
             $(id+ ' span').removeClass('fa-star')
             $(id+' span').addClass('fa-star-o')
           }, 15)
+          //UNSET
           } else {
             //YELLOW
             $(id).addClass('active')
@@ -796,9 +846,8 @@
               $(id+' span').addClass('fa-star')
               $(id+' span').removeClass('fa-star-o')
             }, 150)
-            //ADD ID TO COOKIE
-            //POST
-            window.location.replace("addToFavorites.php?movieName="+name);
+            //GET
+            window.location.href = "addToFavorites.php?movieName="+name;
           }
     
         }
