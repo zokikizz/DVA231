@@ -29,6 +29,8 @@
       array_push($movieArray, new movie($row[0], $row[1], $row[2], $row[3]));
     }
 
+    if(isset($_SESSION['user']))
+    {
     $res = mysqli_query($conn, "SELECT movie_id FROM favorite_movies
 			WHERE user_id=" . $_SESSION['user']->id .
 			";" );
@@ -40,7 +42,7 @@
 			{
 				array_push($_SESSION['favoriteMovies'], $row[0]);
 			}
-
+    }
     mysqli_close($conn);
 
 
