@@ -4,7 +4,7 @@ ini_set('session.gc-maxlifetime', 60 * 60 * 24 * 365);
   session_start();
   session_destroy();
 
-  header('Location: http://localhost/lab/index.php');
+  header('Location: http://localhost:8013/index.php');
 
 
  ?>

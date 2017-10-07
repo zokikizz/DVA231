@@ -23,12 +23,23 @@
     mysqli_select_db($conn,'dva231');
     $result = mysqli_query($conn, "SELECT * FROM movies");
     //echo $result;
-
+    $json = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=797b711215e70b7e890d5aa62ce6ab70&language=en-US&page=1s");
+    $obj = json_decode($json);
+    $obj = $obj->results;
+    $i = 0;
+    foreach ($obj as $value) {
+      $i++;    
+      array_push($movieArray, new Movie($value->id, $value->title, $value->overview, $value->poster_path));
+      if($i > 8) break;
+    }
+    
+    
+    /*
     while( $row = mysqli_fetch_array($result))
     {
       array_push($movieArray, new movie($row[0], $row[1], $row[2], $row[3]));
     }
-
+    */
     if(isset($_SESSION['user']))
     {
     $res = mysqli_query($conn, "SELECT movie_id FROM favorite_movies
@@ -80,6 +91,7 @@
     //latest activity
     $_SESSION['last_action'] = time();
  ?>
+
 
 
 <!DOCTYPE html>
@@ -395,11 +407,11 @@
 								   in_array($movieArray[$i]->id, $_SESSION['favoriteMovies']) ) {
                   ?>
 								  <div
-                  onClick="removeFromFavoritesAjax(<?php echo $movieArray[$i]->id ?>,
-                  '<?php echo (string)$movieArray[$i]->title ?>')"
+                  onClick="removeFromFavoritesAjax(<?php print_r($movieArray[$i]->id) ?>,
+                  '<?php print_r($movieArray[$i]->title) ?>')"
                     class="click-star poster1">
 									<a href="#">
-                    <i id="<?php echo $movieArray[$i]->id ?>" class="material-icons active">star</i>
+                    <i id="<?php print_r($movieArray[$i]->id) ?>" class="material-icons active">star</i>
                   </a>
 								  </div>
 								<?php
@@ -409,11 +421,11 @@
 								  ?>
 
 								  <div
-                  onClick="addToFavoritesAjax(<?php echo $movieArray[$i]->id ?>
-                  ,'<?php echo (string)$movieArray[$i]->title ?>')"
+                  onClick="addToFavoritesAjax(<?php print_r($movieArray[$i]->id) ?>
+                  ,'<?php print_r($movieArray[$i]->title) ?>')"
                     class="click-star poster1">
 									           <a
-									           href="#"><i id="<?php echo $movieArray[$i]->id ?>"
+									           href="#"><i id="<?php print_r($movieArray[$i]->id) ?>"
                                 class="material-icons">star_border</i></a>
 								  </div>
 								  <?php
@@ -424,11 +436,11 @@
 
 
 
-                <img src="posters/<?php echo $movieArray[$i]->posterUrl; ?> " alt="poster">
+                <img src="https://image.tmdb.org/t/p/w185<?php print_r($movieArray[$i]->posterUrl); ?> " alt="poster">
 
                 <div class="aboutPoster">
-                <h3><?php   echo $movieArray[$i]->title; ?></h3>
-                <p> <?php echo $movieArray[$i]->description; ?> </p>
+                <h3><?php   print_r($movieArray[$i]->title); ?></h3>
+                <p> <?php print_r($movieArray[$i]->description); ?> </p>
                 </div>
 
                 </div>

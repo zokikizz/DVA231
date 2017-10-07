@@ -42,17 +42,17 @@ if($_REQUEST != NULL )
 			}
 
 			$conn->close();
-		header('Location: http://localhost/lab/index.php'); //redirect
+		header('Location: http://localhost:8013/index.php'); //redirect
 	}
 	else
 	{
-		header('Location: http://localhost/lab/login.php');
+		header('Location: http://localhost:8013/login.php');
 	}
 
 }
 else
 {
-	header('Location: http://localhost/lab/login.php');
+	header('Location: http://localhost:8013/login.php');
 }
 
 
