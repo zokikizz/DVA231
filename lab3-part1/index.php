@@ -507,80 +507,7 @@
       <aside>
         <div class="asideLinks">
 
-          <h3>Opening This week</h3>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Mother!</a>
-            </div>
-
-
-          </div>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">American Assassin</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Brad's Status</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Rebel in the Rye</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Because Of Grácia</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Woodpeckers</a>
-            </div>
-
-          </div>
-
-
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">In Search of Fellini</a>
-            </div>
-
-            </div>
+          <h3 id=upcoming>Opening This week</h3>
 
             <p class="seemore"><a href="#">See more opening this week</a></p>
 
@@ -589,82 +516,16 @@
 
         <div class="asideLinks">
 
-          <h3>Opening This week</h3>
+          <h3 id='mostRated'>Now Playing (Box Office)</h3>
 
           <div class="asideRow">
             <div class="linkWrapper">
               <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
               <a href="#">Mother!</a>
             </div>
-
-
           </div>
 
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">American Assassin</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Brad's Status</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Rebel in the Rye</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Because Of Grácia</a>
-            </div>
-
-            <div class="asideLimited">Limited</div>
-
-
-          </div>
-
-
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">Woodpeckers</a>
-            </div>
-
-          </div>
-
-
-
-          <div class="asideRow">
-            <div class="linkWrapper">
-              <i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i>
-              <a href="#">In Search of Fellini</a>
-            </div>
-
-            </div>
-
-            <p class="seemore"><a href="#">See more opening this week</a></p>
+            <p class="seemore"><a href="#">See more box office results</a></p>
 
         </div>
 
@@ -769,8 +630,30 @@
             //GET
             window.location.href = "addToFavorites.php?movieName="+name;
           }
-
         }
+
+        function loadUpComing(){
+          $.get( "https://api.themoviedb.org/3/movie/upcoming?api_key=797b711215e70b7e890d5aa62ce6ab70&language=en-US&page=1s", function( data ) {
+            for(i = 0; i < 8; i++){
+              console.log(data.results[i].title);
+              $('#upcoming').after('<div class="asideRow"><div class="linkWrapper"><i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i><a href="#">'+data.results[i].title+'</a></div></div>');
+            }
+            //console.log(data.results);
+          });
+        }
+
+        function loadmostRated(){
+          $.get( "https://api.themoviedb.org/3/movie/top_rated?api_key=797b711215e70b7e890d5aa62ce6ab70&language=en-US&page=1s", function( data ) {
+            for(i = 0; i < 15; i++){
+              console.log(data.results[i].title);
+              $('#mostRated').after('<div class="asideRow"><div class="linkWrapper"><i class="material-icons">bookmark<i class="fa fa-plus" aria-hidden="true"></i></i><a href="#">'+data.results[i].title+'</a></div></div>');
+            }
+            //console.log(data.results);
+          });
+        }
+
+        loadUpComing();
+        loadmostRated();
 
 
   </script>
