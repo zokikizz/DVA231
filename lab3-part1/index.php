@@ -569,7 +569,6 @@
             dataType: 'json',
             data: sendData,
             success: function(data) {
-              debugger;
                 console.log(data);
                 $('#'+data['id'])[0].className = null;
                 $('#'+data['id'])[0].className = 'material-icons active';
@@ -579,7 +578,6 @@
                 alert("You have succesfully add " + data['title'] + " as your favorite movie.");
               },
             error: function(r, status, error) {
-              debugger;
                 alert("ERROR:" + r.responseText + " " + error);
               }
           })
@@ -597,14 +595,12 @@
               dataType: 'json',
               data: sendData,
               success: function(data) {
-                debugger;
                   $("#"+data['id'])[0].className = null;
                   $("#"+data['id'])[0].className = 'material-icons';
                   $('#'+data['id']).html('star_border');
                   alert("You have succesfully removed " + data['title'] + " from your favorite list.");
                 },
               error: function(r, status, error) {
-                debugger;
                   alert("ERROR:" + r.responseText);
                 }
             })
